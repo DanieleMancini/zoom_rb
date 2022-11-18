@@ -17,6 +17,9 @@ module Zoom
 
       get 'dashboard_meeting_participants', '/metrics/meetings/:meeting_id/participants',
         permit: %i[next_page_token page_size type]
+
+      get 'dashboard_webinar_details', '/metrics/webinars/:webinar_id',
+          permit: :type
     end
   end
 end
